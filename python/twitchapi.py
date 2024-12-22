@@ -47,12 +47,12 @@ if data.status_code == 200:
 
     if stream_data.status_code == 200:
 
-        stream_result_bruh = stream_data.json()
+        stream_result = stream_data.json()
 
 
         #if streamer offline this will not work
         try:
-            stream_result = stream_result_bruh['data'][0]
+            stream_result = stream_result['data'][0]
             print(stream_result)
             print(f"{user} is playing {stream_result['game_name']}")
             print(f"There is currently {stream_result['viewer_count']} viewers")
